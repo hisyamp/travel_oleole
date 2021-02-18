@@ -64,7 +64,7 @@
                     <div class="tour_package_cotent owl-carousel">
                         @foreach($datas as $data)
                         <div class="single_tour_package">
-                            <img src="{{asset($data->gambar)}}" alt="">
+                            <img src="{{asset($data->gambar)}}" style="height: 380px;width: 300px; " alt="">
                             <div class="tour_pack_content">
                                 <h4><a href="{{route('view.room',$data->id)}}">{{$data->nama}}</a></h4>
                                 <p> {{$data->alamat}}</p>
@@ -76,39 +76,21 @@
                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                         <li><a href="#"><i class="fas fa-star"></i></a></li>
                                     </ul>
-                                    <a href="#" class="btn1">join now</a>
+                                    <a href="{{route('view.room',$data->id)}}" class="btn1">more Info</a>
                                 </div>
                             </div>
                         </div>
                         @endforeach
-                        <div class="single_tour_package">
-                            <img src="{{asset('public/tourby/img/tour_plan_2.png')}}" alt="">
-                            <div class="tour_pack_content">
-                                <h4>Sawpalo, Brasil</h4>
-                                <p> Lorem ipsum dolor sit amet, consectetur adipi
-                                    elit sed do eiusmod tempor incididunt</p>
-                                <div class="tour_content_rating">
-                                    <ul>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                        <li><a href="#"><i class="fas fa-star"></i></a></li>
-                                    </ul>
-                                    <a href="#" class="btn1">join now</a>
-                                </div>
-                            </div>
-                        </div>
+                        
                         
                     </div>
                 </div>
                 <div class="col-lg-5 col-xl-3 offset-lg-1 col-sm-6">
                     <div class="tour_pack_content">
                         <img src="{{asset('public/tourby/img/section_tittle_img.png')}}" alt="">
-                        <h2>tour package</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit 
-                        sed  do eiusmod tempor incididunt ut</p>
-                        <a href="#" class="btn_1">join now</a>
+                        <h2>Tourby</h2>
+                        <p>Anda Memiliki Referensi Tempat Wisata?</p>
+                        <a href="{{route('view.contact')}}" class="btn_1">Hubungi Kami</a>
                     </div>
                 </div>
             </div>

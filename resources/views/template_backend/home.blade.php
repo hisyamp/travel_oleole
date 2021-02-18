@@ -49,11 +49,15 @@
                 <i class="far fa-user"></i> Profile
               </a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item has-icon text-danger" href=""
-                 onclick="event.preventDefault();
-                 document.getElementById('logout-form').submit();">
-                 {{ __('Logout') }}
-              </a>
+              <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
 
               <form id="logout-form" action="" method="POST" class="d-none">
               @csrf

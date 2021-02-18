@@ -24,12 +24,21 @@ class ViewController extends Controller
 
     	return view('tampilan.room', compact('data','galleries'));
     }
-    public function cari(Request $request){        
+    public function cari(Request $request){ 
+           
         $datas = Travel::where([
             'city_id' => $request->city_id,
             'category_id' => $request->category_id
         ])->paginate(6);
         
         return view('tampilan.search', compact('datas'));
+    }
+    public function kontak(){ 
+        
+        return view('tampilan.contact');
+    }
+    public function about(){ 
+        
+        return view('tampilan.about');
     }
 }
